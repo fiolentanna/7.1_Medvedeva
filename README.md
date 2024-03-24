@@ -9,9 +9,9 @@
 4) Get task data, в котором в Tests так же реализован запрос на удаление созданной ранее таски и так же очистка переменных окружения
 
 Переменные  коллекции:
-baseUrl:  https://sqlverifier-live-6e21ca0ed768.herokuapp.com/api
-adminLogin: busya2024_admin -  логин для учетной записи с правами администратора
-adminPassword:  busya2024_admin - пароль для учетной записи с правами администратора
+* baseUrl:  https://sqlverifier-live-6e21ca0ed768.herokuapp.com/api
+* adminLogin: busya2024_admin -  логин для учетной записи с правами администратора
+* adminPassword:  busya2024_admin - пароль для учетной записи с правами администратора
 
 В запросах реализованы тесты на 
 - статус код ответа
