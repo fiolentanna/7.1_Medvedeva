@@ -12,7 +12,7 @@
 				{
 					"listen": "test",
 					"script": {
-						"id": "49ab6e79-f0a3-4672-9cf1-058a0702c98a",
+						"id": "e397f874-20b1-4528-8529-2a37901e147f",
 						"exec": [
 							"let jsonData = pm.response.json();",
 							"",
@@ -35,17 +35,20 @@
 							"});",
 							"",
 							"pm.test(\"Проверка соответствия текста\", function () {",
-							"    // Проверяем, совпадает ли значение поля 'text' с ожидаемым текстом, используя Chai.js",
+							"    // Проверяем, совпадает ли значение поля 'text' с ожидаемым текстом",
 							"    chai.expect(jsonData.text).to.eql(\"some text\");",
 							"});",
 							"",
+							"// Тест: Проверка статус кода 201",
 							"pm.test(\"Status code is 201\", function () {\",\"    ",
 							"chai.expect(pm.response.code).to.eql(201);",
 							"});",
 							"",
+							"// Тест: Проверка, что статус код содержит строку \"Created\"",
 							"pm.test(\"Статус код содержит строку 'Created'\", function () {",
 							"    chai.expect(pm.response.status).to.eql(\"Created\");",
 							"});",
+							"",
 							"",
 							"pm.test(\"Content-Security-Policy присутствует в ответе и содержит нужные директивы\", function () {",
 							"    chai.expect(pm.response.headers.has(\"Content-Security-Policy\")).to.be.true;",
@@ -54,13 +57,14 @@
 							"",
 							""
 						],
-						"type": "text/javascript"
+						"type": "text/javascript",
+						"packages": {}
 					}
 				},
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "763ecb5b-e432-4173-acb6-b676222522bd",
+						"id": "9c948769-df41-44a3-a166-c3ea456c3db3",
 						"exec": [
 							"// Отправляем запрос на аутентификацию",
 							"pm.sendRequest({",
@@ -110,7 +114,8 @@
 							"pm.environment.set(\"text\", \"Текст, состоит из букв\");",
 							""
 						],
-						"type": "text/javascript"
+						"type": "text/javascript",
+						"packages": {}
 					}
 				}
 			],
